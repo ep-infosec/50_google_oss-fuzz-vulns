@@ -1,0 +1,31 @@
+id: OSV-2020-2101
+summary: Heap-buffer-overflow in lduw_he_p
+details: |
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=26691
+
+  ```
+  Crash type: Heap-buffer-overflow READ 2
+  Crash state:
+  lduw_he_p
+  ldn_he_p
+  flatview_write_continue
+  ```
+modified: '2022-04-13T03:04:33.292896Z'
+published: '2020-10-29T00:00:36.328045Z'
+references:
+- type: REPORT
+  url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=26691
+affected:
+- package:
+    name: qemu
+    ecosystem: OSS-Fuzz
+  ranges:
+  - type: GIT
+    repo: https://git.qemu.org/git/qemu.git
+    events:
+    - introduced: e75de8354ac5c67145b2f8874d3c36022d4a94bb
+    - fixed: a9f67c1d51dda405bc6a406d13c8802b98df904e
+  versions:
+  - v5.2.0-rc0
+  ecosystem_specific:
+    severity: MEDIUM

@@ -1,0 +1,27 @@
+id: OSV-2021-795
+summary: Uncaught exception
+details: |
+  OSS-Fuzz report: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=34646
+
+  ```
+  Crash type: Uncaught exception
+  Crash state:
+  NULL```
+modified: '2022-04-13T03:04:36.380867Z'
+published: '2021-05-25T23:50:45.528753Z'
+references:
+- type: REPORT
+  url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=34646
+affected:
+- package:
+    name: kryo
+    ecosystem: OSS-Fuzz
+  ranges:
+  - type: GIT
+    repo: https://github.com/EsotericSoftware/kryo
+    events:
+    - introduced: a830dac4e5cb923ef878413767b5951bfe696559
+  versions:
+  - kryo-parent-5.2.0
+  ecosystem_specific:
+    severity: LOW
